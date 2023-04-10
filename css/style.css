@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+   /*  background-color: black; */
+}
+
+a {
+    text-decoration: none;
+}
+
+header,
+footer {
+    background-color: #FF8C00;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 1rem 0;
+}
+
+footer {
+    justify-content: center;
+}
+
+section {
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* menu lateral */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFA500;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 1rem;
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidenav a:hover {
+    background-color: #FF8C00;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+.graf-tab {
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 25%;
+}
+
+table {
+    width: 100%;
+    margin: 1rem;
+    text-align: center;
+    overflow: auto;
+}
+
+caption {
+    background-color: #FF8C00;
+}
+
+table,
+th,
+td {
+    background-color: #FF8C00;
+    border: 1px solid white;
+    padding: 0.5rem;
+}
+
+input {
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    color: black;
+}
+
+#formulario {
+    display: flex;
+    justify-content: center;
+}
+
+#formulario form {
+    background-color: #FF8C00;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.form-item {
+    margin: 0.5rem;
+}
+
+.btn {
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-confirma {
+    background-color: teal;
+    color: white;
+}
+
+.btn-confirma:hover {
+    background-color: rgba(0, 128, 128, 0.5);
+}
+
+/* corrigindo a cor do tooltip do grafico */
+.goog-tooltip div {
+    color: black;
+}
+
+.material-symbols-outlined {
+    margin: 0 0.5rem;
+}
+
+.card {
+    width: fit-content;
+    box-shadow: 1px 1px 5px 0 black;
+    margin: 1rem;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 5px 0 black;
+}
+
+#exibe-valor {
+    align-self: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 128, 0.5);
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#despesas {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+#entradas {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+
+    .graf-tab,
+    section {
+        width: 90%;
+    }
+
+    #exibe-valor {
+        order: 1;
+    }
+
+    #entradas {
+        order: 2;
+    }
+
+    #despesas {
+        order: 3;
+    }
+
+}
+
+
+/* @media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+} */
